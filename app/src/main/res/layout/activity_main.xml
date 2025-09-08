@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Notas: 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <!-- Campo de texto para capturar nota -->
+    <EditText
+        android:id="@+id/etNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="55dp"
+        android:hint="Escribe tu nota aquí..."
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:maxLines="3"
+        android:gravity="top|start"
+        android:inputType="textMultiLine|textCapSentences" />
+
+    <!-- Botón para guardar nota -->
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Guardar Nota"
+        android:textSize="16sp"
+        android:backgroundTint="@android:color/holo_green_dark" />
+
+    <!-- Título del listado -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="Mis Notas:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Listado de notas con ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/notes_background"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/tvNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="No hay notas guardadas"
+            android:textSize="15sp"
+            android:lineSpacingExtra="4dp"
+            android:gravity="top|start" />
+
+    </ScrollView>
+
+    <!-- Botón para limpiar notas -->
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Limpiar Todas las Notas"
+        android:textSize="16sp"
+        android:backgroundTint="@android:color/holo_red_dark" />
+
+</LinearLayout>
