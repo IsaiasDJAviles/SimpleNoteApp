@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.notepad"
-        minSdk = 22
+        minSdk = 23
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -30,7 +30,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    // Habilitar ViewBinding
+    //Habilitar ViewBinding
     buildFeatures {
         viewBinding = true
     }
@@ -45,5 +45,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("androidx.room:room-runtime:2.8.1")
+    annotationProcessor("androidx.room:room-compiler:2.8.1")
 
 }
